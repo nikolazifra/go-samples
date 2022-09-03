@@ -13,7 +13,7 @@ func TestInput(t *testing.T) {
 	u.Add('0')
 	want := "10"
 	if u.GetValue() != want {
-		t.Errorf("Wanted %v but got %v", want, u.GetValue())
+		t.Errorf("GetValue want %v but got %v", want, u.GetValue())
 	}
 
 }
