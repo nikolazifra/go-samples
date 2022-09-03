@@ -24,7 +24,7 @@ func TestMerge(t *testing.T) {
 	b := []string{"two", "three"}
 	want := []string{"one", "two", "three"}
 	if got := Merge(a, b); !Equals(want, got) {
-		t.Errorf("Hello() = want %q, got %q", want, got)
+		t.Errorf("Merge() = want %q, got %q", want, got)
 	}
 }
 
@@ -33,6 +33,6 @@ func TestMergeDups(t *testing.T) {
 	b := []string{"two", "three", "one", "two"}
 	want := []string{"one", "two", "four", "three"}
 	if got := Merge(a, b); !Equals(want, got) {
-		t.Errorf("Hello() = want %q, got %q", want, got)
+		t.Errorf("Merge() = want %q, got %q", want, got)
 	}
 }
