@@ -1,4 +1,4 @@
-module nikolazifra/go-samples
+module /samples
 
 go 1.18
 
