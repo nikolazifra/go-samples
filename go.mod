@@ -1,4 +1,4 @@
-module gocloud.com/samples
+module nikolazifra/go-samples
 
 go 1.18
 
