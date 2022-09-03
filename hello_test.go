@@ -1,4 +1,4 @@
-package samples
+package hello1034
 
 import "testing"
 
