@@ -1,15 +1,15 @@
 package samples
 
-func keys(m map[string]bool) (result []string) {
-	result = make([]string, 0, len(m))
+func keys[K comparable, V any](m map[K]V) (result []K) {
+	result = make([]K, 0, len(m))
 	for key := range m {
 		result = append(result, key)
 	}
 	return
 }
 
-func removeDups(a []string) []string {
-	var m map[string]bool = make(map[string]bool, len(a))
+func removeDups[K comparable](a []K) []K {
+	var m map[K]bool = make(map[K]bool, len(a))
 	for _, val := range a {
 		_, found := m[val]
 		if !found {
@@ -21,6 +21,6 @@ func removeDups(a []string) []string {
 	return keys(m)
 }
 
-func Merge(a, b []string) []string {
+func Merge[K comparable](a, b []K) []K {
 	return removeDups(append(a, b...))
 }
